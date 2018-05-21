@@ -8,7 +8,7 @@
 
 html {
 	margin: 0;
-	padding: 50px;
+	padding: 10px;
     background-color: rgba(0,0,0,1);
 }
 
@@ -17,19 +17,26 @@ body{
     
     color:rgba(0,0,0,1);
     background-color: rgba(191,207,230,1);
-    
+    background-color: #fff;
+    /*
+    background-image: url(/img/Fond.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    */
     margin:auto auto; 
     padding:10px;
     
     line-height:normal;
     
     border: 1px solid rgba(0,0,0,0.5); 
-    border-radius:20px;
+    /* border-radius:20px; */
     
     display: block;
     width: 100%;
     
+    /*
     box-shadow: inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(255,255,255,0.5);    
+    */
 }
 
 header{
@@ -37,6 +44,7 @@ header{
     border-bottom: 1px solid rgba(0,0,0,1);
     filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.2));
     */
+    margin-top: 50px;
     clear:both;   
 }
 
@@ -77,12 +85,13 @@ main{
   display:block;
   width:100%;
   margin:0 auto;
-  clear:both;   
+  clear:both; 
+    padding:50px 0 0 0;
 }
 
 article{
     display: inline-block;
-    width:  52%;
+    width:  53%;
     float: left;
     border-right: 0px solid rgba(0,0,0,0.2);
 }
@@ -97,10 +106,16 @@ aside{
     float: right;
     
     background-color: rgba(255,255,255,0.5);
-    border: 1px solid rgba(0,0,0,0.5);
-    border-radius: 10px;
+    background-color: rgba(255,255,255,0.9);
     
-    box-shadow: inset 2px 2px 2px rgba(255,255,255,1), inset -2px -2px 2px rgba(255,255,255,1);
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 0px;
+    
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+    /*
+    box-shadow: inset 2px 2px 2px rgba(255,255,255,1), inset -2px -2px 2px 
+    */
+    rgba(255,255,255,1);
     
 }
 
@@ -141,19 +156,20 @@ section:hover{
 
 div#MenuPage{
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 30px;
+    left: 30px;
     
     width: 64px;
     height: 64px;
     
-    border: 1px solid rgba(0,0,0,0.6);
+    /*border: 1px solid rgba(0,0,0,0.6);*/
+    
     border-radius: 50%;
     
     overflow: hidden;
     
-    box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
-    background-color: rgba(255,255,255,1);
+    /*box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);*/
+    /*background-color: rgba(255,255,255,1);*/
     background-image: url("/img/031.png");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -168,19 +184,21 @@ div:hover#MenuPage{
 
 div#MenuPdf{
     position: absolute;
-    top: 20px;
-    left: 100px;
+    top: 30px;
+    left: 110px;
     
     width: 64px;
     height: 64px;
     
-    border: 1px solid rgba(0,0,0,0.6);
+    /*border: 1px solid rgba(0,0,0,0.6);*/
+    
     border-radius: 50%;
     
     overflow: hidden;
     
-    box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
-    background-color: rgba(255,255,255,1);
+    /*box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);*/
+    
+    /*background-color: rgba(255,255,255,1);*/
     background-image: url("/img/028.png");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -211,17 +229,23 @@ div:hover#MenuPdf{
 div#PhotoDaniel{
     z-index:200;
     position: absolute;
-    top: 20px;
+    top: 30px;
     right: -200px;
     
-    width: 64px;
-    height: 64px;
+    width: 128px;
+    height: 128px;
     
     border-radius: 50%;
     overflow: hidden;
-    
+    /*
     border: 1px solid rgba(0,0,0,0.6);
+    */
+    /*border: 1px solid rgba(255,255,255,0.6);*/
+    /*
     box-shadow: inset 2px 2px 4px rgba(0,0,0,0.15);
+    */
+    
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
     
     background-color: rgba(255,255,255,1);
     
@@ -243,8 +267,8 @@ div:hover#PhotoDaniel{
     height: 190px;
     border-radius: 20px;
     transition: all 225ms ease-in-out 0ms; 
-    top: 20px;
-    right: 20px;    
+    top: 30px;
+    right: 30px;    
 }
 
 #PhotoDaniel img{
@@ -253,7 +277,7 @@ div:hover#PhotoDaniel{
 
 @keyframes SlidePhoto {
   from {right: -200px}
-  to {right: 20px;}
+  to {right: 30px;}
 }
 
 
@@ -266,7 +290,7 @@ div:hover#PhotoDaniel{
     left:2%;
     
     width: 96%;
-    height: 96%;
+    height: 50%;
 
     /* ratio 1.54 */
     
@@ -274,11 +298,17 @@ div:hover#PhotoDaniel{
     
     border: 1px solid rgba(0,0,0,0.95);
     box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    
     box-shadow: inset 1px 1px 3px rgba(0,0,0,0.5),inset -1px -1px 3px rgba(0,0,0,0.5);
 }
 
 #MeContacter:target{
-    display:inline-block;
+    display:block;
+    clear:both;
+    width: 95%;
+    height: 95%;
+    margin:10px;
+    overflow-y:auto;
 }
 
 #MeContacter p{
@@ -317,14 +347,19 @@ section#Competences, section#Loisirs, section#Formations, section#Nom{
     padding:10px; 
     
     background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.9);
     border: 1px solid rgba(0,0,0,0.5);
-    border-radius: 10px;
-    
-    box-shadow: inset 2px 2px 2px rgba(255,255,255,1), inset -2px -2px 2px rgba(255,255,255,1);    
+    border-radius: 0px;
+    /*
+    box-shadow: inset 2px 2px 2px rgba(255,255,255,1), inset -2px -2px 2px 
+    */
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+    rgba(255,255,255,1);    
 }
 
 #Competences h2, #Loisirs h2, #Formations h2, #Nom h2{
     background-color: rgba(255,255,255,0.5);
+    background-color: rgba(0,0,0,0.1);
     padding:5px;
 }
 
