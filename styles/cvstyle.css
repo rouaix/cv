@@ -1,12 +1,3 @@
-@media screen and (max-width: 499px) {
-    html{padding:10px;}
-    article, aside {
-        width: 100%;
-        min-width: 80%;
-        display:block;
-    }
-}
-
 .centre{text-align: center;}
 
 *{    
@@ -25,18 +16,20 @@ body{
     font-family: tahoma, arial, helvetica, lucida sans, sans-serif;
     
     color:rgba(0,0,0,1);
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(191,207,230,1);
     
     margin:auto auto; 
     padding:10px;
     
     line-height:normal;
     
-    border: 1px solid rgba(255,255,255,0.3); 
+    border: 1px solid rgba(0,0,0,0.5); 
     border-radius:20px;
     
     display: block;
     width: 100%;
+    
+    box-shadow: inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(255,255,255,0.5);    
 }
 
 header{
@@ -89,15 +82,26 @@ main{
 
 article{
     display: inline-block;
-    width:  45%;
+    width:  52%;
     float: left;
     border-right: 0px solid rgba(0,0,0,0.2);
 }
 
 aside{
     display: inline-block;
-    width:  55%;
-    float: right; 
+    
+    margin:10px;
+    padding:0 0 50px 0; 
+    
+    width:  45%;
+    float: right;
+    
+    background-color: rgba(255,255,255,0.5);
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 10px;
+    
+    box-shadow: inset 2px 2px 2px rgba(255,255,255,1), inset -2px -2px 2px rgba(255,255,255,1);
+    
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -137,22 +141,48 @@ section:hover{
 
 div#MenuPage{
     position: absolute;
-    top: 32px;
-    left: 32px;
+    top: 20px;
+    left: 20px;
     
     width: 64px;
     height: 64px;
     
     border: 1px solid rgba(0,0,0,0.6);
-    border-radius: 4px;
+    border-radius: 50%;
     
     overflow: hidden;
     
     box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
     background-color: rgba(255,255,255,1);
-    background-image: url("/img/Iphone-Disk.png");
+    background-image: url("/img/031.png");
     background-repeat: no-repeat;
     background-size: 100%;
+    
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-name: SlidePhoto; 
+    animation-fill-mode: forwards;    
+}
+
+div#MenuPdf{
+    position: absolute;
+    top: 20px;
+    left: 90px;
+    
+    width: 64px;
+    height: 64px;
+    
+    border: 1px solid rgba(0,0,0,0.6);
+    border-radius: 50%;
+    
+    overflow: hidden;
+    
+    box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
+    background-color: rgba(255,255,255,1);
+    background-image: url("/img/028.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
     
     animation-delay: 1s;
     animation-duration: 3s;
@@ -161,22 +191,29 @@ div#MenuPage{
 }
 
 div#PhotoDaniel{
+    z-index:200;
     position: absolute;
-    top: 10px;
+    top: 20px;
     right: -200px;
     
-    width: 120px;
-    height: 120px;
+    width: 64px;
+    height: 64px;
+    
+    border-radius: 50%;
+    overflow: hidden;
     
     border: 1px solid rgba(0,0,0,0.6);
-    border-radius: 75px;
-    overflow: hidden;
     box-shadow: inset 2px 2px 4px rgba(0,0,0,0.15);
+    
     background-color: rgba(255,255,255,1);
+    
     background-image: url("/img/Photo_Daniel.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-    
+    /*
+    filter: contrast(1.2);
+    filter: saturate(0);
+    */
     animation-delay: 1s;
     animation-duration: 3s;
     animation-name: SlidePhoto; 
@@ -184,12 +221,12 @@ div#PhotoDaniel{
 }
 
 div:hover#PhotoDaniel{
-    width: 200px;
-    height: 250px;
+    width: 150px;
+    height: 190px;
     border-radius: 20px;
     transition: all 225ms ease-in-out 0ms; 
-    top: 10px;
-    right: 10px;    
+    top: 20px;
+    right: 20px;    
 }
 
 #PhotoDaniel img{
@@ -198,22 +235,24 @@ div:hover#PhotoDaniel{
 
 @keyframes SlidePhoto {
   from {right: -200px}
-  to {right: 10px;}
+  to {right: 20px;}
 }
 
 #MeContacter{
     display:none;
     position: absolute;
-    z-index: 10;
+    z-index: 210;
     
-    top: 25%;
-    left:25%;
+    top: 2%;
+    left:2%;
     
-    width: 50%;
+    width: 96%;
+    height: 96%;
 
     /* ratio 1.54 */
     
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(255,255,255,0.98);
+    
     border: 1px solid rgba(0,0,0,0.95);
     box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
     box-shadow: inset 1px 1px 3px rgba(0,0,0,0.5),inset -1px -1px 3px rgba(0,0,0,0.5);
@@ -223,29 +262,89 @@ div:hover#PhotoDaniel{
     display:inline-block;
 }
 
+#MeContacter p{
+    text-align: center;
+}
+
+#MeContacter h1 {
+    margin-top: -30px;
+}
+
+#MeContacter h1 img{
+    width:32px;
+    float:left;
+    margin-right:10px;
+}
+
+#Fermer img{
+    width:48px;
+}
+
 a#Fermer{
     display:block;
     text-align: right;
-    top: -20px;
-    right: -20px;
+    top: 5px;
+    right: 5px;
 }
 
 #Fermer{
     position: relative;
     
 }
+section#Competences, section#Loisirs, section#Formations, section#Nom{
+    display: block;
+    
+    margin:10px 10px;
+    padding:10px; 
+    
+    background-color: rgba(255,255,255,0.5);
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 10px;
+    
+    box-shadow: inset 2px 2px 2px rgba(255,255,255,1), inset -2px -2px 2px rgba(255,255,255,1);    
+}
 
-#competences h2{
-    background-color: rgba(0,0,0,0.2);
+#Competences h2, #Loisirs h2, #Formations h2, #Nom h2{
+    background-color: rgba(255,255,255,0.5);
     padding:5px;
 }
-#connaissances h2{
-    background-color: rgba(0,0,0,0.2);
-    padding:5px;
+
+#Loisirs img{
+    display: block;
+    width:48px;
+    margin:5px;
+    /*z-index:150;*/
 }
-#formations h2{
-    background-color: rgba(0,0,0,0.2);
-    padding:5px;
+#Loisirs img.zoom{
+    margin:5px;
+    display:block;
+    border:1px solid rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+#Loisirs img.zoom:hover{
+    display:block;
+    width:99%;
+    margin:5px;
+    /*z-index:150;*/
+    transition: all 500ms ease-in-out 0ms;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    cursor:pointer;
+}
+#Loisirs ul li, #Loisirs ul{
+    display:block;
+    clear:both;
+}
+
+@keyframes chaussure {
+  0% {
+    margin-left: 0%;
+  }
+  50% {
+    margin-left: 50%;
+  }
+  100% {
+    margin-left: 0%;
+  }
 }
 
 #cible:target{
@@ -409,4 +508,46 @@ section.colonneC{
     left: 0px;
     top: 0px;
   }
+}
+
+@media only screen and (min-device-width: 501px) and (max-device-width: 1280px) and (orientation:portrait) { }
+
+
+@media only screen and (max-width: 1024px) {
+    html{
+        margin:0;
+        padding:10px;
+    }
+    body{
+        margin:0;
+        padding:50px 10px 10px 10px;
+    }
+    main{
+        margin:0;
+        padding:0;
+    }
+    article{
+        display:block;
+        width: 100%;
+        position:relative;
+        margin:0;
+        padding:0;
+    }
+    aside {
+        width: 100%;
+        display:block;
+        position:relative;
+        margin:0;
+        padding:0 0 25px 0;
+    }
+    section {
+        width:100%;
+        display: block;
+        position: relative;
+        margin:10px;
+        padding: 5px;
+    }
+    section#Competences, section#Loisirs, section#Formations, section#Nom {
+            margin:10px 0 10px 0;
+    }
 }
