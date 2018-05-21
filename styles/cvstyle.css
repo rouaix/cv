@@ -157,17 +157,19 @@ div#MenuPage{
     background-image: url("/img/031.png");
     background-repeat: no-repeat;
     background-size: 100%;
-    
-    animation-delay: 1s;
+}
+
+div:hover#MenuPage{
+    animation-delay: 0s;
     animation-duration: 3s;
-    animation-name: SlidePhoto; 
-    animation-fill-mode: forwards;    
+    animation-name: ZoomMenu; 
+    animation-fill-mode: forwards;      
 }
 
 div#MenuPdf{
     position: absolute;
     top: 20px;
-    left: 90px;
+    left: 100px;
     
     width: 64px;
     height: 64px;
@@ -182,14 +184,30 @@ div#MenuPdf{
     background-image: url("/img/028.png");
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: center center;
-    
-    animation-delay: 1s;
-    animation-duration: 3s;
-    animation-name: SlidePhoto; 
-    animation-fill-mode: forwards;    
+    background-position: center center; 
 }
 
+div:hover#MenuPdf{
+    animation-delay: 0s;
+    animation-duration: 3s;
+    animation-name: ZoomMenu; 
+    animation-fill-mode: forwards;       
+}
+
+@keyframes ZoomMenu {
+  0% {
+      width: 64px;
+      height: 64px;
+    }
+  50% {  
+      width: 80px;
+      height: 80px;
+    }
+  100% {
+      width: 64px;
+      height: 64px;
+    }    
+}
 div#PhotoDaniel{
     z-index:200;
     position: absolute;
@@ -210,10 +228,10 @@ div#PhotoDaniel{
     background-image: url("/img/Photo_Daniel.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-    /*
+    
     filter: contrast(1.2);
     filter: saturate(0);
-    */
+    
     animation-delay: 1s;
     animation-duration: 3s;
     animation-name: SlidePhoto; 
@@ -237,6 +255,7 @@ div:hover#PhotoDaniel{
   from {right: -200px}
   to {right: 20px;}
 }
+
 
 #MeContacter{
     display:none;
