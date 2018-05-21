@@ -1,21 +1,257 @@
+@media screen and (max-width: 499px) {
+    html{padding:10px;}
+    article, aside {
+        width: 100%;
+        min-width: 80%;
+        display:block;
+    }
+}
+
+.centre{text-align: center;}
+
 *{    
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 14px;
   box-sizing: border-box;
 }
 
+html {
+	margin: 0;
+	padding: 50px;
+    background-color: rgba(0,0,0,1);
+}
+
+body{
+    font-family: tahoma, arial, helvetica, lucida sans, sans-serif;
+    
+    color:rgba(0,0,0,1);
+    background-color: rgba(255,255,255,1);
+    
+    margin:auto auto; 
+    padding:10px;
+    
+    line-height:normal;
+    
+    border: 1px solid rgba(255,255,255,0.3); 
+    border-radius:20px;
+    
+    display: block;
+    width: 100%;
+}
+
+header{
+    /*
+    border-bottom: 1px solid rgba(0,0,0,1);
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.2));
+    */
+    clear:both;   
+}
+
+header h1, header h2{text-align: center;}
+
+#TitreDePage{
+    margin-left: -3000px;
+    
+    animation-delay: 1s;
+    animation-duration: 4s;
+    animation-name: SlideHeader; 
+    animation-fill-mode: forwards;    
+}
+
+@keyframes SlideHeader {
+  from {margin-left: -3000px;}
+  to {margin-left: 0px;}
+}
+
+#Poste{
+    Position: relative;
+    top: -1000px;
+    
+    animation-delay: 0s;
+    animation-duration: 4s;
+    animation-name: SlidePoste; 
+    animation-fill-mode: forwards;      
+}
+
+@keyframes SlidePoste {
+  from {top: -1000px;}
+  to {top: 0px;}
+}
+
+#Mission{font-weight:smaller;}
+
+main{
+  display:block;
+  width:100%;
+  margin:0 auto;
+  clear:both;   
+}
+
+article{
+    display: inline-block;
+    width:  45%;
+    float: left;
+    border-right: 0px solid rgba(0,0,0,0.2);
+}
+
+aside{
+    display: inline-block;
+    width:  55%;
+    float: right; 
+}
+
+h1, h2, h3, h4, h5, h6{
+  text-shadow:1px 1px 1px rgba(0,0,0,0.1);
+  padding:0 10px;
+}
+
+h1{font-size: 24px;font-weight:600;
+    text-shadow:2px 2px 2px rgba(0,0,0,0.2);}
+h2{font-size: 20px;font-weight:580;}
+h3{font-size: 18px;font-weight:560;}
+h4{font-size: 17px;font-weight:540;}
+h5{font-size: 16px;font-weight:520;}
+h6{font-size: 15px;font-weight:500;}
+
+a, a:link, a:visited,a:hover{
+  color:rgba(0,0,0,1);
+  text-decoration:none;
+}
+
+section{
+    margin:0;
+    padding:0;
+    background-color: inherit;
+    border:1px solid rgba(0,0,0,0);
+    
+    transition: background-color 3s;
+    transform: translate(2px,2px);    
+}
+
+section:hover{
+    /*
+    background-color:rgba(30,115,190,0.2);
+    border:1px solid rgba(0,0,0,1);
+    */
+}
+
+div#MenuPage{
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    
+    width: 64px;
+    height: 64px;
+    
+    border: 1px solid rgba(0,0,0,0.6);
+    border-radius: 4px;
+    
+    overflow: hidden;
+    
+    box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
+    background-color: rgba(255,255,255,1);
+    background-image: url("/img/Iphone-Disk.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-name: SlidePhoto; 
+    animation-fill-mode: forwards;    
+}
+
+div#PhotoDaniel{
+    position: absolute;
+    top: 10px;
+    right: -200px;
+    
+    width: 120px;
+    height: 120px;
+    
+    border: 1px solid rgba(0,0,0,0.6);
+    border-radius: 75px;
+    overflow: hidden;
+    box-shadow: inset 2px 2px 4px rgba(0,0,0,0.15);
+    background-color: rgba(255,255,255,1);
+    background-image: url("/img/Photo_Daniel.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-name: SlidePhoto; 
+    animation-fill-mode: forwards;    
+}
+
+div:hover#PhotoDaniel{
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    transition: all 225ms ease-in-out 0ms; 
+    top: 10px;
+    right: 10px;    
+}
+
+#PhotoDaniel img{
+    width: 100%;
+}
+
+@keyframes SlidePhoto {
+  from {right: -200px}
+  to {right: 10px;}
+}
+
+#MeContacter{
+    display:none;
+    position: absolute;
+    z-index: 10;
+    
+    top: 25%;
+    left:25%;
+    
+    width: 50%;
+
+    /* ratio 1.54 */
+    
+    background-color: rgba(255,255,255,1);
+    border: 1px solid rgba(0,0,0,0.95);
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.5),inset -1px -1px 3px rgba(0,0,0,0.5);
+}
+
+#MeContacter:target{
+    display:inline-block;
+}
+
+a#Fermer{
+    display:block;
+    text-align: right;
+    top: -20px;
+    right: -20px;
+}
+
+#Fermer{
+    position: relative;
+    
+}
+
+#competences h2{
+    background-color: rgba(0,0,0,0.2);
+    padding:5px;
+}
+#connaissances h2{
+    background-color: rgba(0,0,0,0.2);
+    padding:5px;
+}
+#formations h2{
+    background-color: rgba(0,0,0,0.2);
+    padding:5px;
+}
+
 #cible:target{
     display: block;
 }
 
-@keyframes zoomin {
-  from {
-    width: 0px;
-  }
-  to {
-    width: 130px;
-  }
-}
 
 @keyframes zoomout {
   from {
@@ -35,16 +271,6 @@
     width:0px;
   }
 }
-
-@keyframes slideleft {
-  from {
-    margin-left: 2550px;
-  }
-  to {
-    margin-left: 0px;
-  }
-}
-
 @keyframes descendre {
   from {
     top: -2550px;
@@ -54,61 +280,6 @@
   }
 }
 
-#bombe{
-    display:none;
-}
-
-#bombe:target{
-    display: block;
-    position: absolute;
-    width:150px;
-    height:150px;
-    margin-top:10px;
-    margin-left:10px;
-    padding:20px;
-    z-index:10;
-}
-
-#bombeclose:target{
-  animation-delay: 0s;
-  animation-duration: 5s;
-  animation-name: bombeout; 
-  animation-fill-mode: forwards;    
-}
-
-html {
-	margin: 0;
-	padding: 0;	
-}
-
-h1, h2, h3, h4, h5, h6{
-  text-shadow:1px 1px 1px rgba(0,0,0,0.1);
-  padding:0 10px;
-}
-
-h1{font-size: 24px;font-weight:600;text-shadow:2px 2px 2px rgba(0,0,0,0.2);}
-h2{font-size: 20px;font-weight:580;}
-h3{font-size: 18px;font-weight:560;}
-h4{font-size: 17px;font-weight:540;}
-h5{font-size: 16px;font-weight:520;}
-h6{font-size: 15px;font-weight:500;}
-
-a, a:link, a:visited,a:hover{
-  color:rgba(0,0,0,1);
-  text-decoration:none;
-}
-
-section{
-  padding:10px;
-  background-color: inherit;
-  z-index:1;
-  border:1px solid rgba(0,0,0,0);
-}
-
-section:hover{
-  background-color:rgba(30,115,190,0.2);
-  border:1px solid rgba(0,0,0,1);
-}
 
 li{
   list-style: none;
@@ -129,91 +300,23 @@ p{
   padding:10px;
 }
 
-body{
-  background-color: rgba(255,255,255,1);
-  font-family: tahoma, arial, helvetica, lucida sans, sans-serif;
-  color:rgba(0,0,0,0.95);
-  border: 0px solid rgba(0,0,0,1); 
-  max-width:1200px;
-  margin:0 auto; 
-  padding:20px;
-  line-height:normal;
-  z-index:1;
-}
 
-header{
-  z-index:1;
-  height:170px;
-  overflow:hidden;
-  border-bottom:1px solid rgba(0,0,0,1);
-  filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.2));
-}
 
 #formations{
   clear:both;
   z-index:1;
   overflow:hidden;
-  border-top:1px solid rgba(0,0,0,1);
+  /*
+    border-top:1px solid rgba(0,0,0,1);
   filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.2));  
-}
-
-main, article {
-  display:block;
-  max-width:100%;
-  min-width:400px;	
-  margin:0 auto;
-  clear:both;
-  max-height:100%;
-  z-index:1;
+    */
 }
 
 #diviseur, .diviseur{
   clear:both;
-  margin:10px auto;
+  margin:0;
 }
 
-#photo{
-  z-index:1;
-  float:right;
-  margin:auto 10px;
-  width:0px;
-  display:inline;
-  border: 1px solid rgba(0,0,0,0.2);
-  animation-duration: 5s;
-  animation-name: zoomin; 
-  animation-fill-mode: forwards; 
-}
-
-#photo:hover{
-  animation-duration: 5s;
-  animation-name: zoomout; 
-  animation-fill-mode: forwards; 
-}
-
-#poste{
-  display:inline-block;
-  float:right;
-  z-index:1; 
-  margin-top:135px;
-}
-
-#nom{
-  float:left; 
-  display:inline-block;
-}
-
-#mission{
-  font-weight:smaller;
-}
-
-#blockpage{  
-  clear:both;
-  z-index:1;
-  max-width:1300px;
-  vertical-align:top;
-  text-align:center;
-  position:relative;   
-}
 
 section.colonneA{
   float:left;
@@ -224,11 +327,13 @@ section.colonneA{
   text-align:left;  
   position:relative;
   overflow:hidden;
+    /*
   top:6550px;
   animation-delay: 5s;
   animation-duration: 5s;
   animation-name: monter; 
-  animation-fill-mode: forwards;  
+  animation-fill-mode: forwards; 
+    */
   height:100%; 
 }
 
@@ -256,11 +361,13 @@ section.colonneB{
   position:relative;
   
   overflow:hidden;
+    /*
   top:-2250px;
   animation-delay: 10s;
   animation-duration: 5s;
   animation-name: descendre; 
   animation-fill-mode: forwards; 
+    */
   height:100%;
 }
 
@@ -283,12 +390,13 @@ section.colonneC{
   
   position:relative;
   overflow:hidden;
+    /*
   top:6000px;
   animation-delay: 3s;
   animation-duration: 5s;
   animation-name: diagonale; 
   animation-fill-mode: forwards; 
-  
+  */
   height:100%;
 }
 
