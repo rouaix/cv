@@ -1,219 +1,282 @@
-<!DOCTYPE html5>
+<!DOCTYPE html>
 <html lang="fr-FR">
 
 <head>
     <meta charset="utf-8">
     <title>Curriculum vitae de Daniel ROUAIX</title>
-    
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Daniel ROUAIX">
     <meta name="description" content="Curriculum vitae en ligne de Daniel ROUAIX">
-    
+
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css" />    
-    <link rel="stylesheet" href="styles/Timeline.css" />  
-    <link rel="stylesheet" href="styles/cvstyle.css" />  
-    <link rel="stylesheet" href="styles/modifications.css" />     
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="./styles/Timeline.css" />
+    <link rel="stylesheet" href="./styles/cvstyle.css" />
+    <link rel="stylesheet" href="./styles/surcharge.css" />
+
+    <script language="JavaScript">
+        /*Fonction qui désactive le bouton si les champs sont vides */
+        function verifForm(formulaire) {
+            if (formulaire.nom.value == "" || formulaire.email.value == "") {
+                formulaire.envoyer.disabled = true;
+            }
+            if (formulaire.nom.value != "" && formulaire.email.value != "") {
+                formulaire.envoyer.disabled = false;
+            }
+        }
+    </script>
 </head>
 
-<body>
+<body onload="verifForm(formA)">
+    <header>
 
-<div id="PhotoDaniel">&nbsp;</div>
-<a href="#MeContacter" title="Me Contacter"><div id="MenuPage">&nbsp;</div></a>
-<a href="/Curriculum_vitae_Web_Daniel_ROUAIX.pdf" target="_blank" title="Mon CV Pdf"><div id="MenuPdf">&nbsp;</div></a>
-<div id="MeContacter">
-<a id="Fermer" href="#FermerContacter"><img src="/img/025.png" alt="" /></a>    
-    <h1><img src="/img/adresse.png" alt="" />Daniel ROUAIX</h1>
-    <hr />
-    <p>32 Avenue Payul SIRVENT<br/>13380 Plan de Cuques</p>
-    <p>T&eacute;l&eacute;phone: <a href="tel:0613835865" title="Pour me téléphoner cliquez ici !"><strong>06 13 83 58 65</strong></a><br/>Mail:<a href="mailto:daniel@rouaix.com" title="Pour m&apos;envoyer un mail, cliquez ici !"> <strong>daniel@rouaix.com</strong></a></p>
-    <p>&nbsp;</p>
-    <p class="centre">Pour télécharger mon Curriculum vitae dans un fomat imprimable ("Pdf"), cliquez ci-dessous.<br /><br /><a href="/Curriculum_vitae_Web_Daniel_ROUAIX.pdf" target="_blank" title=""><img src="/img/pdf.png" alt="CV Pdf" width="130" /></a></p>
-    <div class="diviseur">&nbsp;</div>
-</div>
-<div class="diviseur">&nbsp;</div>
-<header>   
-    <h1 id="TitreDePage">Curriculum vitae de Daniel ROUAIX</h1>
-    <h2 id="Poste">Poste recherch&eacute;: <span id="Mission">Selon mission</span></h2>
-</header>
-    
-<main>
-    
-<article>      
-    <section id="Competences">
-    <h2>Comp&eacute;tences</h2>
-    <h3>Points Forts</h3>
-        <ul>
-            <li>Forte capacit&eacute; d&apos;adaptation</li>
-            <li>Polyvalent</li>
-            <li>Autonome</li>
-            <li>Curieux</li>
-        </ul>
-    <h3>D&eacute;veloppement Web</h3>
-        <ul>
-            <li><i>Bonne ma&icirc;trise:</i><br />Html, Css, Php, Mysql, Ftp, Wordpress</li>
-        </ul>         
-    <h3>Bureautique</h3>
-        <ul>
-            <li><i>Tr&egrave;s bonne ma&icirc;trise:</i><br />Microsoft Office, Word, Excel, PowerPoint, Outlook, Erp Microsoft Dynamics AX, Vba pour Office</li>
-            <li><br/><i>Utilisateur:</i><br />Photoshop, Illustrator, Fireworks, InDesign</li>
-        </ul>
-    <h3>Formation</h3>
-        <ul>
-            <li>Formation des utilisateurs</li>
-            <ul>
-                <li>Dynamics AX</li>
-                <li>Microsoft Office</li>
-            </ul>
-        </ul>        
-    <h3>Approvisionnement</h3>
-        <ul>
-            <li>Commandes Fournisseurs (10M&euro;)</li>
-            <li>Gestion des incidents</li> 
-            <li>Back office approvisionnement</li>
-            <li>Conception et mise &agrave; jour de rapports d&apos;activit&eacute; (Reporting, KPI)</li>
-        </ul>
-    <h3>Gestion de stock</h3>
-        <ul>
-            <li>Planification des flux</li>
-            <li>Suivi des inventaires</li>
-            <li>Planification des transports</li>
-        </ul>
-    <h3>Encadrement</h3>
-        <ul>
-            <li>Organisation des &eacute;quipes</li>
-            <li>Priorisation du travail</li>
-            <li>Gestion du temps</li>
-        </ul>
-    </section>
+        
+        <div id="MeContacter" class="Informations">
+            <div class="row">
+                <div class="col-md-6">
+                    <form id="formA" name="formA" action="mailto:daniel@rouaix.com?subject=Message du BOT cv.rouaix.com" method="post" ENCTYPE="text/plain">
+                        <h1>Formulaire de contact</h1>
+                        <hr />
+                        <div class="form-group">
+                            <label for="prenom">Prénom:</label>
+                            <input class="form-control" type="text" name="prenom" placeholder="Saisir votre prénom" maxlength="250">
+                        </div>
+                        <div class="form-group">
+                            <label for="nom">Nom: <i>(Saisie obligatoire)</i></label>
+                            <input class="form-control" type="text" name="nom" placeholder="Saisir votre nom" minlength="2" maxlength="250" required onchange="verifForm(this.form)">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Courriel: <i>(Saisie obligatoire)</i></label>
+                            <input class="form-control" type="email" name="email" placeholder="Saisir votre adresse mail" minlength="4" maxlength="250" required onchange="verifForm(this.form)">
+                        </div>
+                        <div class="form-group">
+                            <label for="objet">Objet du message:</label>
+                            <input class="form-control" type="text" name="objet" placeholder="Saisir l'objet du message" maxlength="500">
+                        </div>
+                        <div class="form-group">
+                            <label for="texte">Votre message:</label>
+                            <textarea maxlength="2750" name="texte" placeholder="Saisir votre message" rows="10"></textarea>
+                        </div>
+                        <div class="centre">
+                            <input type="reset" value="Effacer" class="btn btn-danger">
+                            <input type="submit" name="envoyer" id="envoyer" value="Envoyer le formulaire" class="btn btn-primary">
+                        </div>
+                    </form>
+                </div>
 
-    <section id="Loisirs">
-    <h2>Loisirs</h2>
-        <ul>      
-            <li>Infographie<br /><img src="/img/infographie.jpg" alt="" class="zoom"/></li>
-            <br />
-            <li>Peinture<br /><img src="/img/pochoir_004.jpg" alt="" class="zoom" /></li>
-            <br />
-            <li>Marche<br /><img src="/img/CA-wp6.jpg" alt="" class="zoom"/></li>
-        </ul>
-    </section>
-    <section id="Formations">
-    <h2>Etudes et formations</h2>
-        <ul>
-            <li><strong>2018 Simplon</strong><br />Développement d'une application Web simple<br />Html, Css, Javascript<br />Marseille</li>
-            <br/>
-            <li><strong>2005 Mediapost</strong><br />Management op&eacute;rationnel<br />Toulon</li>
-            <br />
-            <li><strong>1993 Fnac</strong><br />Vente en r&eacute;ception d&apos;appels<br />Angers</li>
-            <br />
-            <li><strong>1988 Vogica</strong><br />Vente directe<br />Amiens</li>
-            <br />
-            <li><strong>1984-1986 Compagnie des Agents de Change</strong><br />Brevet de Banque<br />Cours du soir<br />Paris</li>
-            <br />
-            <li><strong>1982-1984 Compagnie des Agents de Change</strong><br />CAP Bourse<br />Cours du soir<br />Paris</li>
-            <br />
-            <li><strong>1980 Lyc&eacute;e de Chelles</strong><br />Niveau BAC Economique et social</li>
-        </ul>
-    </section>
-     <section id="Nom">
-        <h2>Daniel ROUAIX</h2>
-         <p style="margin-left:30px;">32 Avenue Paul SIRVENT 13380 Plan de Cuques - T&eacute;l&eacute;phone: <a href="tel:0613835865" title="Téléphone">06 13 83 58 65</a> - Mail:<a href="mailto:daniel@rouaix.com" title="Pour m&apos;envoyer un mail, cliquez ici !"> daniel@rouaix.com</a><br />N&eacute; le 25/10/1962 &agrave; St Rapha&euml;l (Var) - Nationalit&eacute; Fran&ccedil;aise
-            <br />
-            <br />Permis A, B, Bateau (c&ocirc;tier)</p>
-    </section>     
-</article>
+                <div class="col-md-6">
+                    <div class="marge">
+                        <a id="Fermer" href="#FermerContacter"><button type="button" class="btn btn-danger">Fermer</button></a>
+                        <hr />
+                        <h1 class="centre"><img src="./img/adresse.png" alt="" width="64" style="margin-right:10px;" />Daniel ROUAIX</h1>
+                        <p class="centre">32 Avenue Payul SIRVENT<br/>13380 Plan de Cuques</p>
+                        <p class="centre">T&eacute;l&eacute;phone: <a href="tel:0613835865" title="Pour me téléphoner cliquez ici !"><strong>06 13 83 58 65</strong></a>
+                            <br/>Mail:<a href="mailto:daniel@rouaix.com" title="Pour m&apos;envoyer un mail, cliquez ici !"> <strong>daniel@rouaix.com</strong></a></p>
+                    </div>
+                    <hr />
+                    <div class="marge">
+                        <p class="centre">Pour télécharger mon Curriculum vitae dans un fomat imprimable ("Pdf"), cliquez ci-dessous.<br /><br />
+                            <a href="./Curriculum_vitae_Web_Daniel_ROUAIX.pdf" target="_blank" title=""><img src="./img/pdf.png" alt="CV Pdf" width="64" /></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 id="TitreDePage" class="blanc centre">Curriculum vitae de Daniel ROUAIX</h1>
+        <h2 id="Poste" class="blanc centre">Poste recherch&eacute;: <span id="Mission">Selon mission</span></h2>   
+    </header>
+    <nav>
+        <div class="LesBoutons">
+            <a href="#MeContacter" title="Me Contacter"><button type="button" class="btn btn-primary">Me contacter</button></a>
+            <a href="./Curriculum_vitae_Web_Daniel_ROUAIX.pdf" target="_blank" title="Mon CV Pdf"><button type="button" class="btn btn-primary">CV au format "PDF"</button></a>
+         
+        </div>    
+    </nav>
 
-<aside id="timeline">
-<div class="timeline">
+    <main class="container">
+        <div class="FondBlanc">
+        <article>
+            <section id="Competences">
+                <h2>Comp&eacute;tences</h2>
+                <h3>Points Forts</h3>
+                <ul>
+                    <li>Forte capacit&eacute; d&apos;adaptation</li>
+                    <li>Polyvalent</li>
+                    <li>Autonome</li>
+                    <li>Curieux</li>
+                </ul>
+                <h3>D&eacute;veloppement Web</h3>
+                <ul>
+                    <li><i>Bonne ma&icirc;trise:</i><br />Html, Css, Php, Mysql, Ftp, Wordpress</li>
+                </ul>
+                <h3>Bureautique</h3>
+                <ul>
+                    <li><i>Tr&egrave;s bonne ma&icirc;trise:</i><br />Microsoft Office, Word, Excel, PowerPoint, Outlook, Erp Microsoft Dynamics AX, Vba pour Office</li>
+                    <li><br/><i>Utilisateur:</i><br />Photoshop, Illustrator, Fireworks, InDesign</li>
+                </ul>
+                <h3>Formation</h3>
+                <ul>
+                    <li>Formation des utilisateurs</li>
+                    <ul>
+                        <li>Dynamics AX</li>
+                        <li>Microsoft Office</li>
+                    </ul>
+                </ul>
+                <h3>Approvisionnement</h3>
+                <ul>
+                    <li>Commandes Fournisseurs (10M&euro;)</li>
+                    <li>Gestion des incidents</li>
+                    <li>Back office approvisionnement</li>
+                    <li>Conception et mise &agrave; jour de rapports d&apos;activit&eacute; (Reporting, KPI)</li>
+                </ul>
+                <h3>Gestion de stock</h3>
+                <ul>
+                    <li>Planification des flux</li>
+                    <li>Suivi des inventaires</li>
+                    <li>Planification des transports</li>
+                </ul>
+                <h3>Encadrement</h3>
+                <ul>
+                    <li>Organisation des &eacute;quipes</li>
+                    <li>Priorisation du travail</li>
+                    <li>Gestion du temps</li>
+                </ul>
+            </section>
 
-  <div class="timeline-item">
-    <div class="timeline-icon"><img src="img/Hall-9000.png" alt="" width="51" style="position:relative;top:0%;left:0px;" /></div>
-    <div class="timeline-content">
-      <p class="timeline-content-date">2010-2018<br />Bio Habitat</p>
-      <p>Technicien approvisionneur<br />Key User Dynamics AX<br />Key User Bureautique</p>
-    </div>
-  </div>
 
-  <div class="timeline-item">
-    <div class="timeline-icon"><img src="img/Hall-9004.png" alt="" width="51" style="position:relative;top:0%;left:0px;" /></div>
-    <div class="timeline-content right">
-      <p class="timeline-content-date">2007-2009<br />Favreau S.A.</p>
-      <p>Responsable de magasin (Stock)<br />Technicien informatique</p>
-    </div>
-  </div>
+            <section id="Formations">
+                <h2>Etudes et formations</h2>
+                <ul>
+                    <li><strong>2018 Simplon</strong><br />Développement d'une application Web simple<br />Html, Css, Javascript<br />Marseille</li>
+                    <br/>
+                    <li><strong>2005 Mediapost</strong><br />Management op&eacute;rationnel<br />Toulon</li>
+                    <br />
+                    <li><strong>1993 Fnac</strong><br />Vente en r&eacute;ception d&apos;appels<br />Angers</li>
+                    <br />
+                    <li><strong>1988 Vogica</strong><br />Vente directe<br />Amiens</li>
+                    <br />
+                    <li><strong>1984-1986 Compagnie des Agents de Change</strong><br />Brevet de Banque<br />Cours du soir<br />Paris</li>
+                    <br />
+                    <li><strong>1982-1984 Compagnie des Agents de Change</strong><br />CAP Bourse<br />Cours du soir<br />Paris</li>
+                    <br />
+                    <li><strong>1980 Lyc&eacute;e de Chelles</strong><br />Niveau BAC Economique et social</li>
+                </ul>
+            </section>
+            <section id="Nom">
+                <h2>Daniel ROUAIX</h2>
+                <p style="margin-left:30px;">32 Avenue Paul SIRVENT 13380 Plan de Cuques - T&eacute;l&eacute;phone: <a href="tel:0613835865" title="Téléphone">06 13 83 58 65</a> - Mail:<a href="mailto:daniel@rouaix.com" title="Pour m&apos;envoyer un mail, cliquez ici !"> daniel@rouaix.com</a><br />N&eacute; le 25/10/1962 &agrave; St Rapha&euml;l (Var) - Nationalit&eacute; Fran&ccedil;aise
+                    <br />
+                    <br />Permis A, B, Bateau (c&ocirc;tier)</p>
+            </section>
+            <section>
+                <img src="./img/Photo_Daniel.jpg" class="Photo"/>
+            </section>
+        </article>
 
-  <div class="timeline-item">
-    <div class="timeline-icon"><img src="img/Hall-9004.png" alt="" width="51" style="position:relative;top:0%;left:0px;" /></div>
-    <div class="timeline-content">
-      <p class="timeline-content-date">2003-2007<br />Mediapost</p>
-      <p>Responsable de plateforme<br />Organisation des &eacute;quipes<br />Jusqu&apos;&agrave; 45 personnes</p>
-    </div>
-  </div>
+        <aside>
+            <div class="timeline">                
+                <div class="timeline-item">
+                    <div class="timeline-icon"><img src="./img/Hall-9000.png" alt="" width="51" style="position:relative;top:0%;left:0px;" /></div>
+                    <div class="timeline-content">
+                        <p class="timeline-content-date">2010-2018<br />Bio Habitat</p>
+                        <p>Technicien approvisionneur<br />Key User Dynamics AX<br />Key User Bureautique</p>
+                    </div>
+                </div>
 
-  <div class="timeline-item">
-    <div class="timeline-icon"><img src="img/Hall-9004.png" alt="" width="51" style="position:relative;top:0%;left:0px;" /></div>
-    <div class="timeline-content right">
-      <p class="timeline-content-date">2000-2002<br />Espace SFR</p>
-      <p>Manager</p>
-    </div>
-  </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><img src="./img/Hall-9004.png" alt="" width="51" style="position:relative;top:0%;left:0px;" /></div>
+                    <div class="timeline-content right">
+                        <p class="timeline-content-date">2007-2009<br />Favreau S.A.</p>
+                        <p>Responsable de magasin (Stock)<br />Technicien informatique</p>
+                    </div>
+                </div>
 
-  <div class="timeline-item">
-    <div class="timeline-icon"><img src="img/Hall-9004.png" alt="" width="51" style="position:relative;top:0%;left:0px;" /></div>
-    <div class="timeline-content">
-      <p class="timeline-content-date">1993-1998<br />Fnac</p>
-      <p>Responsable de rayons<br />Vente BtoC</p>
-    </div>
-  </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><img src="./img/Hall-9004.png" alt="" width="51" style="position:relative;top:0%;left:0px;" /></div>
+                    <div class="timeline-content">
+                        <p class="timeline-content-date">2003-2007<br />Mediapost</p>
+                        <p>Responsable de plateforme<br />Organisation des &eacute;quipes<br />Jusqu&apos;&agrave; 45 personnes</p>
+                    </div>
+                </div>
 
-  <div class="timeline-item">
-    <div class="timeline-icon"><img src="img/Hall-9004.png" alt="" width="51" style="position:relative;top:0%;left:0px;" /></div>
-    <div class="timeline-content right">
-      <p class="timeline-content-date">1990-1992<br />Visea Thorn-Emi</p>
-      <p>Responsable de magasin<br />Location BtoB
-        </p>
-    </div>
-  </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><img src="./img/Hall-9004.png" alt="" width="51" style="position:relative;top:0%;left:0px;" /></div>
+                    <div class="timeline-content right">
+                        <p class="timeline-content-date">2000-2002<br />Espace SFR</p>
+                        <p>Manager</p>
+                    </div>
+                </div>
 
-  <div class="timeline-item">
-    <div class="timeline-icon"><img src="img/Hall-9004.png" alt="" width="51" style="position:relative;top:0%;left:0px;" /></div>
-    <div class="timeline-content">
-      <p class="timeline-content-date">1989-1990<br />Nasa Electronique</p>
-      <p>Responsable de magasin<br />Vente BtoC</p>
-    </div>
-  </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><img src="./img/Hall-9004.png" alt="" width="51" style="position:relative;top:0%;left:0px;" /></div>
+                    <div class="timeline-content">
+                        <p class="timeline-content-date">1993-1998<br />Fnac</p>
+                        <p>Responsable de rayons<br />Vente BtoC</p>
+                    </div>
+                </div>
 
-  <div class="timeline-item">
-    <div class="timeline-icon"><img src="img/Hall-9004.png" alt="" width="51" style="position:relative;top:0%;left:0px;" /></div>
-    <div class="timeline-content right">
-      <p class="timeline-content-date">1987-1990<br />Vogica</p>
-      <p>VRP</p>
-    </div>
-  </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><img src="./img/Hall-9004.png" alt="" width="51" style="position:relative;top:0%;left:0px;" /></div>
+                    <div class="timeline-content right">
+                        <p class="timeline-content-date">1990-1992<br />Visea Thorn-Emi</p>
+                        <p>Responsable de magasin<br />Location BtoB
+                        </p>
+                    </div>
+                </div>
 
-  <div class="timeline-item">
-    <div class="timeline-icon"><img src="img/Hall-9004.png" alt="" width="51" style="position:relative;top:0%;left:0px;" /></div>
-    <div class="timeline-content">
-      <p class="timeline-content-date">1982-1986<br />Meunier & Cie <br />"Agent de change"</p>
-      <p>Cotation d'obligations<br />Gestion de portefeuille<br />Bourse de Paris</p>
-    </div>
-  </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><img src="./img/Hall-9004.png" alt="" width="51" style="position:relative;top:0%;left:0px;" /></div>
+                    <div class="timeline-content">
+                        <p class="timeline-content-date">1989-1990<br />Nasa Electronique</p>
+                        <p>Responsable de magasin<br />Vente BtoC</p>
+                    </div>
+                </div>
 
-  <div class="timeline-item">
-    <div class="timeline-icon"><img src="img/Hall-9000.png" alt="" width="51" style="position:relative;top:0%;left:0px;" /></div>
-  </div>
-</div>
-</aside>
-<div class="diviseur">&nbsp;</div>    
-</main>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><img src="./img/Hall-9004.png" alt="" width="51" style="position:relative;top:0%;left:0px;" /></div>
+                    <div class="timeline-content right">
+                        <p class="timeline-content-date">1987-1990<br />Vogica</p>
+                        <p>VRP</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon"><img src="./img/Hall-9004.png" alt="" width="51" style="position:relative;top:0%;left:0px;" /></div>
+                    <div class="timeline-content">
+                        <p class="timeline-content-date">1982-1986<br />Meunier & Cie <br />"Agent de change"</p>
+                        <p>Cotation d'obligations<br />Gestion de portefeuille<br />Bourse de Paris</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon"><img src="./img/Hall-9000.png" alt="" width="51" style="position:relative;top:0%;left:0px;" /></div>
+                </div>
+                
+                <div class="diviseur">&nbsp;</div>
+            </div> 
+            <section id="Loisirs">
+                <h2>Loisirs</h2>
+                <ul>
+                    <li>Infographie<br /><img src="./img/infographie.jpg" alt="" class="zoom" /></li>
+                    <br />
+                    <li>Peinture<br /><img src="./img/pochoir_004.jpg" alt="" class="zoom" /></li>
+                    <br />
+                    <li>Marche<br /><img src="./img/CA-wp6.jpg" alt="" class="zoom" /></li>
+                </ul>
+            </section>               
+        </aside>
+        </div>
+    </main>
+        
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>  
-    <script src="/bootstrap/js/bootstrap.min.js"></script> 
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+
     <div class="hidden-xs" alt="" style="text-align:center;"><a href="https://www.dana13.fr" target="_blank"><img src="https://www.dana13.fr/wp-content/uploads/2018/05/Logo_blanc_dana13.fr_.png" width="30"/></a></div>
 </body>
+
 </html>

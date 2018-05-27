@@ -1,0 +1,622 @@
+.centre{text-align: center;}
+
+input[type=text]{
+    width:100%;
+    padding:5px;
+    margin: 5px;
+}
+*{    
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+html {
+	margin: 0;
+	padding: 10px;
+    background-color: rgba(33,99,148,1);
+    background-color: #000;
+}
+
+body{
+    font-family: tahoma, arial, helvetica, lucida sans, sans-serif;
+    
+    color:rgba(0,0,0,1);
+    background-color: rgba(255,255,255,1);
+    /* background-color: #216394; */
+        
+    margin:auto auto; 
+    padding:10px;
+    
+    line-height:normal;
+    
+    border: 1px solid rgba(0,0,0,0.5); 
+    /* border-radius:20px; */
+    
+    display: block;
+    width: 100%;
+    
+    /*
+    box-shadow: inset 2px 2px 2px rgba(255,255,255,0.5), inset -2px -2px 2px rgba(255,255,255,0.5);    
+    */
+}
+
+header{
+    /*
+    border-bottom: 1px solid rgba(0,0,0,1);
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.2));
+    */
+    margin-top: 100px;
+    clear:both;   
+}
+
+header h1, header h2{text-align: center;}
+
+#TitreDePage{
+    margin-left: -3000px;
+    
+    animation-delay: 1s;
+    animation-duration: 4s;
+    animation-name: SlideHeader; 
+    animation-fill-mode: forwards;    
+}
+
+@keyframes SlideHeader {
+  from {margin-left: -3000px;}
+  to {margin-left: 0px;}
+}
+
+#Poste{
+    Position: relative;
+    top: -1000px;
+    
+    animation-delay: 0s;
+    animation-duration: 4s;
+    animation-name: SlidePoste; 
+    animation-fill-mode: forwards;      
+}
+
+@keyframes SlidePoste {
+  from {top: -1000px;}
+  to {top: 0px;}
+}
+
+#Mission{font-weight:smaller;}
+
+main{
+  display:block;
+  width:100%;
+  margin:0 auto;
+  clear:both; 
+  padding:50px 0 0 0;
+}
+
+article{
+    display: inline-block;
+    width:  49%;
+    float: left;
+    border-right: 0px solid rgba(0,0,0,0.2);
+}
+
+aside{
+    display: inline-block;  
+    margin:10px;
+    padding:0 0 50px 0; 
+    width:  49%;
+    float: right;
+    
+    background-color: rgba(255,255,255,0.9);
+    
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 0px;
+    
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+    /*
+    box-shadow: inset 2px 2px 2px rgba(255,255,255,1), inset -2px -2px 2px rgba(255,255,255,1); 
+    */
+    
+}
+
+h1, h2, h3, h4, h5, h6{
+  text-shadow:1px 1px 1px rgba(0,0,0,0.1);
+  padding:0 10px;
+}
+
+h1{font-size: 24px;font-weight:600;
+    text-shadow:2px 2px 2px rgba(0,0,0,0.2);
+}
+h2{font-size: 20px; font-weight:580;}
+h3{font-size: 18px;font-weight:560;}
+h4{font-size: 17px;font-weight:540;}
+h5{font-size: 16px;font-weight:520;}
+h6{font-size: 15px;font-weight:500;}
+
+a, a:link, a:visited,a:hover{
+  color:rgba(0,0,0,1);
+  text-decoration:none;
+}
+
+section{
+    margin:0;
+    padding:0;
+    background-color: inherit;
+    border:1px solid rgba(0,0,0,1);
+    
+    transition: background-color 3s;
+    transform: translate(2px,2px);    
+}
+
+section:hover{
+    /*
+    background-color:rgba(30,115,190,0.2);
+    border:1px solid rgba(0,0,0,1);
+    */
+}
+
+div#MenuPage{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    
+    width: 64px;
+    height: 64px;
+    
+    /*border: 1px solid rgba(0,0,0,0.6);*/
+    
+    border-radius: 50%;
+    
+    overflow: hidden;
+    
+    /*box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);*/
+    /*background-color: rgba(255,255,255,1);*/
+    background-image: url("../img/031.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+div:hover#MenuPage{
+    animation-delay: 0s;
+    animation-duration: 3s;
+    animation-name: ZoomMenu; 
+    animation-fill-mode: forwards;      
+}
+
+div#MenuPdf{
+    position: absolute;
+    top: 30px;
+    left: 100px;
+    
+    width: 64px;
+    height: 64px;
+    
+    /*border: 1px solid rgba(0,0,0,0.6);*/
+    
+    border-radius: 50%;
+    
+    overflow: hidden;
+    
+    /*box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);*/
+    
+    /*background-color: rgba(255,255,255,1);*/
+    background-image: url("../img/028.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center; 
+}
+
+div:hover#MenuPdf{
+    animation-delay: 0s;
+    animation-duration: 3s;
+    animation-name: ZoomMenu; 
+    animation-fill-mode: forwards;       
+}
+
+@keyframes ZoomMenu {
+  0% {
+      width: 64px;
+      height: 64px;
+    }
+  50% {  
+      width: 80px;
+      height: 80px;
+    }
+  100% {
+      width: 64px;
+      height: 64px;
+    }    
+}
+div#PhotoDaniel{
+    z-index:200;
+    position: absolute;
+    top: 30px;
+    right: -200px;
+    
+    width: 64px;
+    height: 64px;
+    
+    border-radius: 50%;
+    overflow: hidden;
+    /*
+    border: 1px solid rgba(0,0,0,0.6);
+    */
+    /*border: 1px solid rgba(255,255,255,0.6);*/
+    /*
+    box-shadow: inset 2px 2px 4px rgba(0,0,0,0.15);
+    */
+    
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+    
+    background-color: rgba(255,255,255,1);
+    
+    background-image: url("../img/Photo_Daniel.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+    filter: contrast(1.2);
+    filter: saturate(0);
+    
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-name: SlidePhoto; 
+    animation-fill-mode: forwards;    
+}
+
+div:hover#PhotoDaniel{
+    width: 150px;
+    height: 190px;
+    border-radius: 20px;
+    transition: all 225ms ease-in-out 0ms; 
+    top: 30px;
+    right: 30px;    
+}
+
+#PhotoDaniel img{
+    width: 100%;
+}
+
+@keyframes SlidePhoto {
+  from {right: -200px}
+  to {right: 30px;}
+}
+
+
+#MeContacter{
+    display:none;
+    position: absolute;
+    z-index: 210;
+    
+    top: 2%;
+    left:2%;
+    
+    width: 96%;
+    height: 50%;
+
+    /* ratio 1.54 */
+    
+    background-color: rgba(255,255,255,0.98);
+    
+    border: 1px solid rgba(0,0,0,0.95);
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.5),inset -1px -1px 3px rgba(0,0,0,0.5);
+}
+
+#MeContacter:target{
+    display:block;
+    clear:both;
+    width: 95%;
+    height: 95%;
+    margin:10px;
+    overflow-y:auto;
+}
+
+#MeContacter p{
+    text-align: center;
+}
+
+#MeContacter h1 {
+    margin-top: -30px;
+}
+
+#MeContacter h1 img{
+    width:32px;
+    float:left;
+    margin-right:10px;
+}
+
+#Fermer img{
+    width:48px;
+}
+
+a#Fermer{
+    display:block;
+    text-align: right;
+    top: 5px;
+    right: 5px;
+}
+
+#Fermer{
+    position: relative;
+    
+}
+
+aside#timeline{
+    background-color:  #f1c40f;
+    background-image: url("../img/FPalette.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+section#Competences, section#Loisirs, section#Formations, section#Nom{
+    display: block;
+    
+    margin:10px 10px;
+    padding:10px; 
+    
+    background-color: rgba(255,255,255,0.95);       
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 0px;
+    /*
+    box-shadow: inset 2px 2px 2px rgba(255,255,255,1), inset -2px -2px 2px 
+    */
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+    rgba(255,255,255,1);    
+}
+
+#Competences h2, #Loisirs h2, #Formations h2, #Nom h2{
+    /* background-color: rgba(255,255,255,0.5); */
+    background-color: rgba(0,0,0,0.1);
+    
+    padding:5px;
+}
+
+#Loisirs img{
+    display: block;
+    width:48px;
+    margin:5px;
+    /*z-index:150;*/
+}
+#Loisirs img.zoom{
+    margin:5px;
+    display:block;
+    border:1px solid rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+#Loisirs img.zoom:hover{
+    display:block;
+    width:99%;
+    margin:5px;
+    /*z-index:150;*/
+    transition: all 500ms ease-in-out 0ms;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    cursor:pointer;
+}
+#Loisirs ul li, #Loisirs ul{
+    display:block;
+    clear:both;
+}
+
+@keyframes chaussure {
+  0% {
+    margin-left: 0%;
+  }
+  50% {
+    margin-left: 50%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
+
+#cible:target{
+    display: block;
+}
+
+
+@keyframes zoomout {
+  from {
+    width: 130px;
+  }
+  to {
+    width: 0px;
+  }
+}
+@keyframes bombeout {
+  from {
+    margin-left: 0px;
+    width:128px;
+  }
+  to {
+    margin-left: 2500px;
+    width:0px;
+  }
+}
+@keyframes descendre {
+  from {
+    top: -2550px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+
+li{
+  list-style: none;
+  margin:0;
+}
+
+#titre{
+  animation-delay: 3s;
+  animation-duration: 5s;
+  animation-name: slideleft; 
+  animation-fill-mode: forwards;
+  height:50px;
+  overflow:hidden;
+  margin-left:2550px; 
+}
+
+p{
+  padding:10px;
+}
+
+
+
+#formations{
+  clear:both;
+  z-index:1;
+  overflow:hidden;
+  /*
+    border-top:1px solid rgba(0,0,0,1);
+  filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.2));  
+    */
+}
+
+#diviseur, .diviseur{
+  clear:both;
+  margin:0;
+}
+
+
+section.colonneA{
+  float:left;
+  max-width:400px; 
+  min-width:300px; 
+  display:inline-block;
+  vertical-align:top;
+  text-align:left;  
+  position:relative;
+  overflow:hidden;
+    /*
+  top:6550px;
+  animation-delay: 5s;
+  animation-duration: 5s;
+  animation-name: monter; 
+  animation-fill-mode: forwards; 
+    */
+  height:100%; 
+}
+
+@keyframes monter {
+  from {
+    top: 6550px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+.colonneB li:first-line {
+  font-weight:bolder;
+  text-shadow:1px 1px 1px rgba(0,0,0,0.1);
+}
+
+section.colonneB{
+  max-width:400px;
+  min-width:300px;
+  display:inline-block;
+  vertical-align:top;
+  text-align:left;
+  margin:0 20px;
+  position:relative;
+  
+  overflow:hidden;
+    /*
+  top:-2250px;
+  animation-delay: 10s;
+  animation-duration: 5s;
+  animation-name: descendre; 
+  animation-fill-mode: forwards; 
+    */
+  height:100%;
+}
+
+@keyframes descendre {
+  from {
+    top: -2550px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+section.colonneC{
+  float:right;
+  max-width:400px;
+  min-width:300px;
+  display:inline-block; 
+  vertical-align:top;
+  text-align:left;
+  
+  position:relative;
+  overflow:hidden;
+    /*
+  top:6000px;
+  animation-delay: 3s;
+  animation-duration: 5s;
+  animation-name: diagonale; 
+  animation-fill-mode: forwards; 
+  */
+  height:100%;
+}
+
+@keyframes diagonale {
+  from {
+    left: -3000px;
+    top: 6000px;
+  }
+  to {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@media only screen and (min-device-width: 501px) and (max-device-width: 1280px) and (orientation:portrait) { }
+
+
+@media only screen and (max-width: 1024px) {
+    html{
+        margin:0;
+        padding:10px;
+    }
+    body{
+        margin:0;
+        padding:50px 10px 10px 10px;
+    }
+    main{
+        margin:0;
+        padding:0;
+    }
+    article{
+        display:block;
+        width: 100%;
+        position:relative;
+        margin:0;
+        padding:0;
+    }
+    aside {
+        width: 100%;
+        display:block;
+        position:relative;
+        margin:0;
+        padding:0 0 25px 0;
+    }
+    section {
+        width:100%;
+        display: block;
+        position: relative;
+        margin:10px;
+        padding: 5px;
+    }
+    section#Competences, section#Loisirs, section#Formations, section#Nom {
+            margin:10px 0 10px 0;
+    }
+}
+
+
+@media(min-width:1200px){}
+@media(min-width:992px){}
+@media(min-width:768px){}
+@media(max-width:480px){
+    *{font-size:100%;}
+}
