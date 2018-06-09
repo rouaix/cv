@@ -5,22 +5,19 @@
 }
 
 aside{
-    padding-bottom:30px;
 }
 div.timeline{
     margin:0 auto;
     padding: 0 0 32px 0;
+    
+    /*
     border: 1px solid rgba(0,0,0,1);
     border-radius: 10px;
-    
     background-color: rgba(255, 255, 255, 1);    
+    */
 }
 
 div.timeline::after{
     clear: both;
     content: ' ';
-}
-
-section#Loisirs{
-    margin:0 0 0 0;
 }
